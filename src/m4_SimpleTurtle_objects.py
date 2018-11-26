@@ -48,7 +48,7 @@ import rosegraphics as rg
 
 ###############################################################################
 #
-# TODO: 3.
+# DONE: 3.
 #   Run this module.  A window will pop up and Turtles will move around.
 #   After the Turtles stop moving,
 #      ** click anywhere in the window to close the window **.
@@ -126,10 +126,18 @@ natasha.go_to(rg.Point(-100, 200))
 #   As always, test by running the module.
 #
 ###############################################################################
+natasha.speed = 2
+natasha.backward(30)
+
+natasha.speed = 8
+natasha.right(2)
+natasha.forward(200)
+
+boris.backward(50)
 
 ###############################################################################
 #
-# TODO: 5.
+# DONE: 5.
 #   The above code  CONSTRUCTS  two SimpleTurtle objects
 #   and gives those objects NAMES:
 #       boris    natasha
@@ -153,10 +161,31 @@ natasha.go_to(rg.Point(-100, 200))
 #   As always, test by running the module.
 #
 ###############################################################################
+window = rg.TurtleWindow()
+window.delay(20)
+
+spongebob = rg.SimpleTurtle('turtle')
+spongebob.pen = rg.Pen('yellow', 20)
+spongebob.speed = 6
+
+patrick = rg.SimpleTurtle('turtle')
+patrick.pen = rg.Pen('pink', 30)
+patrick.speed = 4
+
+spongebob.left(80)
+spongebob.forward(300)
+patrick.right(500)
+patrick.forward(170)
+spongebob.left(50)
+patrick.left(300)
+patrick.forward(180)
+spongebob.forward(250)
+
+
 
 ###############################################################################
 #
-# TODO: 6.
+# DONE: 6.
 #   Ensure that no blue bars on the scrollbar-thing to the right remain.
 #   Run one more time to be sure that all is still OK.
 #
