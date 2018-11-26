@@ -2,15 +2,15 @@
 Your chance to explore Loops and Turtles!
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
+         Aaron Wilkin, their colleagues, and Nathalie Grier.
 """
 ########################################################################
-# TODO: 1.
+# DONE: 1.
 #   On Line 5 above, replace  PUT_YOUR_NAME_HERE  with your own name.
 ########################################################################
 
 ########################################################################
-# TODO: 2.
+# DONE: 2.
 #   You should have RUN the  m5e_loopy_turtles  module and READ its code.
 #   (Do so now if you have not already done so.)
 #
@@ -28,3 +28,45 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 #   Don't forget to COMMIT-and-PUSH when you are done with this module.
 #
 ########################################################################
+import rosegraphics as rg
+window = rg.TurtleWindow()
+
+lilo = rg.SimpleTurtle('turtle')
+lilo.pen = rg.Pen('red', 10)
+lilo.speed = 80
+
+stitch = rg.SimpleTurtle('turtle')
+stitch.pen = rg.Pen('blue', 10)
+stitch.speed = 80
+
+size = 200
+
+for k in range(10):
+    lilo.draw_regular_polygon(6,size)
+
+    lilo.pen_up()
+    lilo.right(5)
+    lilo.forward(30)
+    lilo.left(6)
+
+    lilo.pen_down()
+
+    size = size - 40
+
+
+
+size = 150
+
+for k in range(10):
+    stitch.draw_regular_polygon(7, size)
+
+    stitch.pen_up()
+    stitch.left(4)
+    stitch.backward(20)
+    stitch.right(5)
+
+    stitch.pen_down()
+
+    size = size - 30
+
+window.close_on_mouse_click()
